@@ -1,353 +1,439 @@
 <html>
+
 <head>
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
-    <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere" name="description">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="speaker.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
+  <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere"
+    name="description">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="speaker.css" />
 
 
-    <title>Speakers</title>
-    <style>
-	 #header {
-            background-color: black;
-        }
-	.card-text{
-            color: white;
-        }
-        .card-img-top {
-            height: 400px;
-            weight: 500px;
-        }
-        .card:hover {
-            transform: scale(1.01);
-        }
-        
-        .card-title {
-            text-transform: uppercase;
-            font-weight: bold;
-            color: red;
-        }
-        
-        .card-text {
-            font-weight: 600;
-            text-transform: capitalize;
-        }
-        
-        .social a .tw {
-            background-color: #0084b4;
-        }
-        
-        .social a .fb {
-            background-color: #3b5998;
-        }
-        
-        .social a .ig {
-            background-color: #cd486b;
-        }
-        
-        .social a .tw:hover {
-            transform: scale(1.15);
-        }
-        
-        .social a .fb:hover {
-            transform: scale(1.15);
-        }
-        
-        .social a .ig:hover {
-            transform: scale(1.15);
-        }
-        
-        .social div {
-            width: 40px;
-            height: 40px;
-            background: green;
-            margin: 0 5px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-        
-        .social {
-            width: 50%;
-            height: 50px;
-            position: absolute;
-            z-index: 15;
-            bottom: 0%;
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            width: 100%;
-            height: 60px;
-            background-color: black;
-            opacity: 0.85;
-        }
-        
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 1px 16px;
-            text-decoration: none;
-        }
-        
-        .main {
-            padding: 13px;
-            margin-top: 50px;
-            height: 1500px;
-            /* Used in this example to enable scrolling */
-        }
-        
-        .null {
-            display: none;
-            visibility: hidden;
-        }
-    </style>
+  <title>Speakers</title>
+  <style>
+    #header {
+      background-color: black;
+    }
+
+    .card-text {
+      color: white;
+    }
+
+    .card-img-top {
+      height: 400px;
+      weight: 500px;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .card-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: red;
+    }
+
+    .card-text {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .social a .tw {
+      background-color: #0084b4;
+    }
+
+    .social a .fb {
+      background-color: #3b5998;
+    }
+
+    .social a .ig {
+      background-color: #cd486b;
+    }
+
+    .social a .tw:hover {
+      transform: scale(1.15);
+    }
+
+    .social a .fb:hover {
+      transform: scale(1.15);
+    }
+
+    .social a .ig:hover {
+      transform: scale(1.15);
+    }
+
+    .social div {
+      width: 40px;
+      height: 40px;
+      background: green;
+      margin: 0 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .social {
+      width: 50%;
+      height: 50px;
+      position: absolute;
+      z-index: 15;
+      bottom: 0%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 60px;
+      background-color: black;
+      opacity: 0.85;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 1px 16px;
+      text-decoration: none;
+    }
+
+    .main {
+      padding: 13px;
+      margin-top: 50px;
+      height: 1500px;
+      /* Used in this example to enable scrolling */
+    }
+
+    .null {
+      display: none;
+      visibility: hidden;
+    }
+  </style>
 </head>
+
 <body>
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-   <header id="header">
-        <div class="container">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-            <div id="logo" class="pull-left">
-                <h1 style="float: left"><a href="index.html"><img src="img/tedx.jpg" height="60px" width="200px"></a></h1>
-            </div>
+  <header id="header">
+    <div class="container">
 
-            <nav style="float: right;" id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html#body">HOME</a></li>
-                    <li><a href="index.html#about">ABOUT</a></li>
-                    <li><a href="index.html#portfolio">MEDIA</a></li>
-                    <li><a href="index.html#clients">PARTNERS</a></li>
+      <div id="logo" class="pull-left">
+        <h1 style="float: left"><a href="index.html"><img src="img/tedx.jpg" height="60px" width="200px"></a></h1>
+      </div>
 
-                    <li><a href="index.html#contact">VENUE</a></li>
+      <nav style="float: right;" id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html#body">HOME</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="index.html#portfolio">MEDIA</a></li>
+          <li><a href="index.html#clients">PARTNERS</a></li>
 
-                    <li>
-                        <form action=team.html>
-                            <input type="submit" value="TEAM" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px;"></form>
-                    </li>
-                    <li>
-		<form action=speakers.html>
-		<input type="submit" value="SPEAKERS" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-right:12px;padding-left:12px"></form></li>
-               <li>
-                        <form action="https://docs.google.com/forms/d/1x0r8qHoKBNAR-ZZk57FGWsvXq210hbM8qch7pGoARME/edit?ts=656f1f5d">
-                            <input type="submit" value="REGISTER" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;padding-left:3px;padding-right:3px;border-radius: 6px;"></form>
-                    </li>
-                    <!--<li>
+          <li><a href="index.html#contact">VENUE</a></li>
+
+          <li>
+            <form action=team.html>
+              <input type="submit" value="TEAM"
+                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px;">
+            </form>
+          </li>
+          <li>
+            <form action=speakers.html>
+              <input type="submit" value="SPEAKERS"
+                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-right:12px;padding-left:12px">
+            </form>
+          </li>
+          <li>
+            <form
+              action="https://docs.google.com/forms/d/1x0r8qHoKBNAR-ZZk57FGWsvXq210hbM8qch7pGoARME/edit?ts=656f1f5d">
+              <input type="submit" value="REGISTER"
+                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;padding-left:3px;padding-right:3px;border-radius: 6px;">
+            </form>
+          </li>
+          <!--<li>
                         <form action="#">
                             <input type="submit" value="TICKETS" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;"></form>
                     </li>-->
-                    <li style="color:grey; padding-top:10px">|</li>
-                    <li class="social-links">
+          <li style="color:grey; padding-top:10px">|</li>
+          <li class="social-links">
+          </li>
+          <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
+              class="fa fa-instagram"></i></a></li>
+          <li>
+            <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedln"><i
+                class="fa fa-linkedin"></i></a>
+          </li>
+          </li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
 
-                    </li>
-                    <li>
-                        <a href="" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li>
-                        <a href="" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                    <li>
-			 <a href="" class="linkedln"><i class="fa fa-linkedin"></i></a></li>
-                    </li>
-                </ul>
-            </nav>
-            <!-- #nav-menu-container -->
+  <div class="main">
+    <div class="container py-3">
+      <div class="title h1 text-center" style="color:white;font-family: verdana;font-weight:bold;">SPEAKERS</div>
+      <!-- Card Start -->
+
+      <div class="card">
+        <div class="row">
+          <div class="col-md-12 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Will Be Announced Soon</b></h4>
+              </center>
+              <br>
+              <p class="card-text">
+                Stay tuned for updates on our exciting lineup of speakers. We are working hard to bring you an inspiring
+                and diverse group of individuals who will share their unique insights and experiences.
+              </p>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
 
-<div class="main">
-<div class="container py-3">
-  <div class="title h1 text-center" style="color:white;font-family: verdana;font-weight:bold;">SPEAKERS</div>
-  <!-- Card Start -->
-  
-  
-  
-  <div class="card">
+      <!-- <div class="card">
         <div class="row ">
           <div class="col-md-7 px-3">
             <div class="card-block px-6">
-             <center> <h4 class="card-title"><b>Dr. Minal Chandra</b> </h4></center>
-             <p class="subt">Co-Founder, Epionecenter for Pain Relief</p>
-            <p class="card-text">
-              Dr. Minal Chandra, a distinguished Pain Physician with over a decade of experience, is a renowned figure in Pain Medicine, advocating for effective healthcare management through lectures, and as an Educator at Essential Pain Management; hailing from Ranchi, she broke societal norms with support from non-conservative parents, embodying the mantras of hard work and punctuality, earning accolades such as the India 100 Women Icon Award and Women of Substance Award.
+              <center>
+                <h4 class="card-title"><b>Dr. Minal Chandra</b> </h4>
+              </center>
+              <p class="subt">Co-Founder, Epionecenter for Pain Relief</p>
+              <p class="card-text">
+                Dr. Minal Chandra, a distinguished Pain Physician with over a decade of experience, is a renowned figure
+                in Pain Medicine, advocating for effective healthcare management through lectures, and as an Educator at
+                Essential Pain Management; hailing from Ranchi, she broke societal norms with support from
+                non-conservative parents, embodying the mantras of hard work and punctuality, earning accolades such as
+                the India 100 Women Icon Award and Women of Substance Award.
 
-		    </p>
-                
-             
+              </p>
+
+
             </div>
           </div>
-          <div class="col-md-5"> 
-          <img class="d-block" src="img/speakers/minal chandra.png" alt=""  >
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/minal chandra.png" alt="">
           </div>
-         </div>
-      </div>
-  
-  <div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Mansi Sharma Gupta</b> </h4></center>
-           <p class="subt">Career Analyst
-           </p>
-            <p class="card-text">
-              Mansi Sharma Gupta, a compelling speaker and advocate for self-discovery, conducts impactful seminars and webinars on parenting, career guidance, and uncovering the 'unlived life,' offering enriching experiences with insights and "aha" moments; leveraging her wit and knowledge, she empowers individuals to holistically transform their lives, emphasizing the importance of scientifically selecting career paths for successful fulfillment of dream aspirations.
-              </p>
-            
-           </div>
         </div>
-         <div class="col-md-5">
-             <img class="d-block" src="img/speakers/Mansi.jpg" alt="" >
-        </div>  
       </div>
-    </div> 
-	  <div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Roopali Yadugiri</b> </h4></center>
-           <p class="subt" > 
-            Director, Suchirindia Group
-           </p>
-            <p class="card-text">
-              Roopali Kiron Yadugiri, the dynamic Executive Director of Suchirindia Hospitality and Director of Suchirindia Foundation, showcases exceptional leadership and creativity in the leisure and hospitality domains, embodying a passion for industry excellence while actively contributing to state and national endeavors through her commitment to outstanding guest experiences.
-              </p>
-            
-           </div>
-        </div>
-         <div class="col-md-5">
-             <img class="d-block" src="img/speakers/Roopali.jpg" alt="" >
-        </div>  
-      </div>
-    </div> 
-	  <div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Sai Abhinay Chepuri</b> </h4></center>
-           <p class="subt">
-            Serial Entrepreneur
-           </p>
-            <p class="card-text">
-              Sai Abhinay Chepuri, a seasoned Entrepreneur, Innovation Enabler, and Ecosystem Builder, evolved from a successful serial entrepreneur to a mentor, leveraging diverse sector experience in India and Southeast Asia; with a background in fundraising, M&A, and strategic partnerships, he now contributes to startup innovation at T-Hub, a major startup ecosystem in India in collaboration with government and industry partners.
-              </p>
-            
-           </div>
-        </div>
-         <div class="col-md-5">
-             <img class="d-block" src="img/speakers/Abhinay.jpeg" alt="" >
-        </div>  
-      </div>
-    </div> 
-	<div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Sandeep Chatterjee</b> </h4></center>
-           <p class="subt">
-            Supply Chain and Sustainability Leader, IBM Consulting
-           </p>
-            <p class="card-text">
-              Sandeep is a Supply Chain and Sustainability Leader at IBM Consulting, bringing extensive expertise from roles at Deloitte, KPMG, Tata Motors, Lafarge, Infosys, and Oracle Consulting; he excels in supply chain management, business process reengineering, network optimization, sustainability, and ERP advisory globally. Additionally, he serves as a Member of the Board of Governors at IIM Kozhikode, CEO, and Chairman of the International Supply Chain Education Alliance (ISCEA), actively promoting global awareness of supply chain management and holding an executive position on the ISCEA International Standards Board.
-		  </p>
-            
-           </div>
-        </div>
-         <div class="col-md-5">
-             <img class="d-block" src="img/speakers/Sandeep.JPG" alt="" >
-        </div>  
-      </div>
-    </div> 
-	
-	<div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Sneha Tiwari</b> </h4></center>
-           <p class="subt">
-            Sports Physiotherapist
-           </p>
-            <p class="card-text">
-              Sneha Tiwari, one of India's youngest sports physiotherapists, holds key roles with BCCI for Andhra women’s cricket teams and is the Founder, Clinical Director, and Chief Consultant at Momentum Physio and Rehabilitation Center. A former Under-19 Andhra cricket team player, she brings a multidisciplinary approach to sports injury management with multiple degrees in sports physiotherapy, distinguishing herself as a dedicated and accomplished professional.
-		  </p>
-            
-           </div>
-        </div>
-         <div class="col-md-5">
-             <img class="d-block" src="img/speakers/Sneha.jpg" alt="" >
-        </div>  
-      </div>
-    </div> 
-	
-	<div class="card">
-      <div class="row ">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-           <center> <h4 class="card-title"><b>Vithika Sheru</b> </h4></center>
-           <p class="subt">
-		Social media Influencer  
-           </p>
-            <p class="card-text">
-		Vithika Sheru, born on February 2, 1994, in Bhimavaram, is a versatile Indian actress excelling in Telugu, Tamil, and Kannada cinema. With a diploma in fashion design, she started as a child artist in Telugu TV, making her Kannada debut at 15. Her Tamil debut in 2014, "Uyir Mozhi," showcased her commitment, and as a social media influencer with 3.7 million followers, she emphasizes women's empowerment, drawing from her own story of resilience.
-             </p>
-           </div>
-        </div>
-         <div class="col-md-5">
-             <img class="d-block" src="" alt="" >
-        </div>  
-      </div>
-    </div> 
-	
-	<div class="card">
+
+      <div class="card">
         <div class="row ">
           <div class="col-md-7 px-3">
             <div class="card-block px-6">
-             <center> <h4 class="card-title"><b>Shreemayi Reddy</b> </h4></center>
-             <p class="subt">
-		     Fashion and Lifestyle Influencer
-	     </p>
-            <p class="card-text">
-		   Shreemayi Reddy, a Fashion and Lifestyle influencer with 159K followers, radiates cosmic charm through her captivating posts, creating a space where followers feel seen and understood. Recognized as the Cosmopolitan Emerging Beauty Influencer of 20-21, she transforms the digital landscape, turning the ordinary into the extraordinary in her enchanting world.
-		    </p>
-             
+              <center>
+                <h4 class="card-title"><b>Mansi Sharma Gupta</b> </h4>
+              </center>
+              <p class="subt">Career Analyst
+              </p>
+              <p class="card-text">
+                Mansi Sharma Gupta, a compelling speaker and advocate for self-discovery, conducts impactful seminars
+                and webinars on parenting, career guidance, and uncovering the 'unlived life,' offering enriching
+                experiences with insights and "aha" moments; leveraging her wit and knowledge, she empowers individuals
+                to holistically transform their lives, emphasizing the importance of scientifically selecting career
+                paths for successful fulfillment of dream aspirations.
+              </p>
+
             </div>
           </div>
-          <div class="col-md-5"> 
-          <img class="d-block" src="" alt=""  >
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/Mansi.jpg" alt="">
           </div>
-         </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Roopali Yadugiri</b> </h4>
+              </center>
+              <p class="subt">
+                Director, Suchirindia Group
+              </p>
+              <p class="card-text">
+                Roopali Kiron Yadugiri, the dynamic Executive Director of Suchirindia Hospitality and Director of
+                Suchirindia Foundation, showcases exceptional leadership and creativity in the leisure and hospitality
+                domains, embodying a passion for industry excellence while actively contributing to state and national
+                endeavors through her commitment to outstanding guest experiences.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/Roopali.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Sai Abhinay Chepuri</b> </h4>
+              </center>
+              <p class="subt">
+                Serial Entrepreneur
+              </p>
+              <p class="card-text">
+                Sai Abhinay Chepuri, a seasoned Entrepreneur, Innovation Enabler, and Ecosystem Builder, evolved from a
+                successful serial entrepreneur to a mentor, leveraging diverse sector experience in India and Southeast
+                Asia; with a background in fundraising, M&A, and strategic partnerships, he now contributes to startup
+                innovation at T-Hub, a major startup ecosystem in India in collaboration with government and industry
+                partners.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/Abhinay.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Sandeep Chatterjee</b> </h4>
+              </center>
+              <p class="subt">
+                Supply Chain and Sustainability Leader, IBM Consulting
+              </p>
+              <p class="card-text">
+                Sandeep is a Supply Chain and Sustainability Leader at IBM Consulting, bringing extensive expertise from
+                roles at Deloitte, KPMG, Tata Motors, Lafarge, Infosys, and Oracle Consulting; he excels in supply chain
+                management, business process reengineering, network optimization, sustainability, and ERP advisory
+                globally. Additionally, he serves as a Member of the Board of Governors at IIM Kozhikode, CEO, and
+                Chairman of the International Supply Chain Education Alliance (ISCEA), actively promoting global
+                awareness of supply chain management and holding an executive position on the ISCEA International
+                Standards Board.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/Sandeep.JPG" alt="">
+          </div>
+        </div>
       </div>
 
-	<!--
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Sneha Tiwari</b> </h4>
+              </center>
+              <p class="subt">
+                Sports Physiotherapist
+              </p>
+              <p class="card-text">
+                Sneha Tiwari, one of India's youngest sports physiotherapists, holds key roles with BCCI for Andhra
+                women’s cricket teams and is the Founder, Clinical Director, and Chief Consultant at Momentum Physio and
+                Rehabilitation Center. A former Under-19 Andhra cricket team player, she brings a multidisciplinary
+                approach to sports injury management with multiple degrees in sports physiotherapy, distinguishing
+                herself as a dedicated and accomplished professional.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="img/speakers/Sneha.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Vithika Sheru</b> </h4>
+              </center>
+              <p class="subt">
+                Social media Influencer
+              </p>
+              <p class="card-text">
+                Vithika Sheru, born on February 2, 1994, in Bhimavaram, is a versatile Indian actress excelling in
+                Telugu, Tamil, and Kannada cinema. With a diploma in fashion design, she started as a child artist in
+                Telugu TV, making her Kannada debut at 15. Her Tamil debut in 2014, "Uyir Mozhi," showcased her
+                commitment, and as a social media influencer with 3.7 million followers, she emphasizes women's
+                empowerment, drawing from her own story of resilience.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <center>
+                <h4 class="card-title"><b>Shreemayi Reddy</b> </h4>
+              </center>
+              <p class="subt">
+                Fashion and Lifestyle Influencer
+              </p>
+              <p class="card-text">
+                Shreemayi Reddy, a Fashion and Lifestyle influencer with 159K followers, radiates cosmic charm through
+                her captivating posts, creating a space where followers feel seen and understood. Recognized as the
+                Cosmopolitan Emerging Beauty Influencer of 20-21, she transforms the digital landscape, turning the
+                ordinary into the extraordinary in her enchanting world.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="d-block" src="" alt="">
+          </div>
+        </div>
+      </div> -->
+
+      <!--
 	  <div class="card">
       <div class="row ">
         <div class="col-md-7 px-3">
@@ -385,11 +471,11 @@
 
 
 
-     
 
-</div> 
 
-<!-- footer class="page-footer font-small blue">
+    </div>
+
+    <!-- footer class="page-footer font-small blue">
 
     Copyright 
     <div class="footer-copyright text-center py-3" ><p style="color: white;">© 2021 Copyright:
@@ -398,12 +484,15 @@
     
   
   </footer -->
-	<br>
-	    <br>
-	<div class="container mb-4">
-		<center><p style="color: red;">Copyright © 2023 - TEDxBVRITH. All Rights Reserved</p></center>
-	    </div>
-</div>
-</div> 
- </body>
- </html>
+    <br>
+    <br>
+    <div class="container mb-4">
+      <center>
+        <p style="color: red;">Copyright © 2023 - TEDxBVRITH. All Rights Reserved</p>
+      </center>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
