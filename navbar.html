@@ -1,36 +1,124 @@
-<div id="logo" class="pull-left">
-    <h1><a href="#body"><img src="img/tedx.jpg" height="50px" width="300px" class="img-fluid"></a></h1>
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 10px;
+    }
+
+    .navbar #logo img {
+        height: 50px;
+        width: 300px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 20px;
+    }
+
+    .navbar ul li a,
+    .navbar ul li form input[type="submit"] {
+        color: white;
+        text-decoration: none;
+        background-color: #E62B1E;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    .navbar ul li form input[type="submit"] {
+        cursor: pointer;
+    }
+
+    .navbar ul li.social-links a {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .navbar ul li.social-links a i {
+        font-size: 24px;
+    }
+
+    @media (max-width: 1000px) {
+        .navbar ul {
+            flex-direction: column;
+            display: none;
+            width: 100%;
+            background-color: black;
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 10px 0;
+        }
+
+        .navbar .menu-toggle {
+            display: block;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+    }
+
+    @media (min-width: 1001px) {
+        .navbar .menu-toggle {
+            display: none;
+        }
+    }
+</style>
+
+<div class="navbar">
+    <div id="logo" class="pull-left">
+        <h1><a href="#body"><img src="img/tedx.jpg" class="img-fluid"></a></h1>
+    </div>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <nav id="nav-menu-container" class="float-md-right">
+        <ul class="nav-menu d-flex justify-content-end align-items-center">
+            <li class="menu-active"><a href="index.html#body">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#portfolio">MEDIA</a></li>
+            <li><a href="index.html#clients">PARTNERS</a></li>
+            <li><a href="index.html#contact">VENUE</a></li>
+            <li>
+                <form action="team.html">
+                    <input type="submit" value="TEAM">
+                </form>
+            </li>
+            <li>
+                <form action="speakers.html">
+                    <input type="submit" value="SPEAKERS">
+                </form>
+            </li>
+            <li>
+                <form action="regs.html">
+                    <input type="submit" value="REGISTER">
+                </form>
+            </li>
+            <li class="social-links d-flex align-items-center">
+                <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedin"><i
+                        class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </nav>
 </div>
-<nav id="nav-menu-container" class="float-md-right">
-    <ul class="nav-menu d-flex justify-content-end align-items-center">
-        <li class="menu-active"><a href="index.html#body">HOME</a></li>
-        <li><a href="index.html#about">ABOUT</a></li>
-        <li><a href="index.html#portfolio">MEDIA</a></li>
-        <li><a href="index.html#clients">PARTNERS</a></li>
-        <li><a href="index.html#contact">VENUE</a></li>
-        <li>
-            <form action="team.html">
-                <input type="submit" value="TEAM"
-                    style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px;">
-            </form>
-        </li>
-        <li>
-            <form action="speakers.html">
-                <input type="submit" value="SPEAKERS"
-                    style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-left:12px;padding-right:12px">
-            </form>
-        </li>
-        <li>
-            <form action="regs.html">
-                <input type="submit" value="REGISTER"
-                    style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;padding-left:3px;padding-right:3px;border-radius: 6px;">
-            </form>
-        </li>
-        <li class="social-links d-flex align-items-center">
-            <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
-                    class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedin"><i
-                    class="fa fa-linkedin"></i></a>
-        </li>
-    </ul>o
-</nav>
+
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.navbar ul');
+        menu.classList.toggle('show');
+    }
+</script>
