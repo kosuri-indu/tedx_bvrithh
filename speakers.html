@@ -26,7 +26,30 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="speaker.css" />
-
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    }
+  </script>
 
   <title>Speakers</title>
   <style>
@@ -140,97 +163,45 @@
   </style>
 </head>
 
-<body>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<body style="background-color: black;" id="body" name="body" onload="includeHTML()"></body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <header id="header">
-    <div class="container">
+<header id="header">
+  <div class="container">
+    <div w3-include-html="navbar.html"></div>
+  </div>
+</header>
 
-      <div id="logo" class="pull-left">
-        <h1 style="float: left"><a href="index.html"><img src="img/tedx.jpg" height="60px" width="200px"></a></h1>
-      </div>
+<div class="main">
+  <div class="container py-3">
+    <div class="title h1 text-center" style="color:white;font-family: verdana;font-weight:bold;">SPEAKERS</div>
+    <!-- Card Start -->
 
-      <nav style="float: right;" id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html#body">HOME</a></li>
-          <li><a href="index.html#about">ABOUT</a></li>
-          <li><a href="index.html#portfolio">MEDIA</a></li>
-          <li><a href="index.html#clients">PARTNERS</a></li>
-
-          <li><a href="index.html#contact">VENUE</a></li>
-
-          <li>
-            <form action=team.html>
-              <input type="submit" value="TEAM"
-                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px;">
-            </form>
-          </li>
-          <li>
-            <form action=speakers.html>
-              <input type="submit" value="SPEAKERS"
-                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-right:12px;padding-left:12px">
-            </form>
-          </li>
-          <li>
-            <form
-              action="https://docs.google.com/forms/d/1x0r8qHoKBNAR-ZZk57FGWsvXq210hbM8qch7pGoARME/edit?ts=656f1f5d">
-              <input type="submit" value="REGISTER"
-                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;padding-left:3px;padding-right:3px;border-radius: 6px;">
-            </form>
-          </li>
-          <!--<li>
-                        <form action="#">
-                            <input type="submit" value="TICKETS" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;"></form>
-                    </li>-->
-          <li style="color:grey; padding-top:10px">|</li>
-          <li class="social-links">
-          </li>
-          <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
-              class="fa fa-instagram"></i></a></li>
-          <li>
-            <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedln"><i
-                class="fa fa-linkedin"></i></a>
-          </li>
-          </li>
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
-    </div>
-  </header>
-
-  <div class="main">
-    <div class="container py-3">
-      <div class="title h1 text-center" style="color:white;font-family: verdana;font-weight:bold;">SPEAKERS</div>
-      <!-- Card Start -->
-
-      <div class="card">
-        <div class="row">
-          <div class="col-md-12 px-3">
-            <div class="card-block px-6">
-              <center>
-                <h4 class="card-title"><b>Will Be Announced Soon</b></h4>
-              </center>
-              <br>
-              <p class="card-text">
-                Stay tuned for updates on our exciting lineup of speakers. We are working hard to bring you an inspiring
-                and diverse group of individuals who will share their unique insights and experiences.
-              </p>
-            </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-12 px-3">
+          <div class="card-block px-6">
+            <center>
+              <h4 class="card-title"><b>Will Be Announced Soon</b></h4>
+            </center>
+            <br>
+            <p class="card-text">
+              Stay tuned for updates on our exciting lineup of speakers. We are working hard to bring you an inspiring
+              and diverse group of individuals who will share their unique insights and experiences.
+            </p>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- <div class="card">
+    <!-- <div class="card">
         <div class="row ">
           <div class="col-md-7 px-3">
             <div class="card-block px-6">
@@ -433,7 +404,7 @@
         </div>
       </div> -->
 
-      <!--
+    <!--
 	  <div class="card">
       <div class="row ">
         <div class="col-md-7 px-3">
@@ -473,9 +444,9 @@
 
 
 
-    </div>
+  </div>
 
-    <!-- footer class="page-footer font-small blue">
+  <!-- footer class="page-footer font-small blue">
 
     Copyright 
     <div class="footer-copyright text-center py-3" ><p style="color: white;">© 2021 Copyright:
@@ -484,15 +455,15 @@
     
   
   </footer -->
-    <br>
-    <br>
-    <div class="container mb-4">
-      <center>
-        <p style="color: red;">Copyright © 2025 - TEDxBVRITH. All Rights Reserved</p>
-      </center>
-    </div>
+  <br>
+  <br>
+  <div class="container mb-4">
+    <center>
+      <p style="color: red;">Copyright © 2025 - TEDxBVRITH. All Rights Reserved</p>
+    </center>
   </div>
-  </div>
+</div>
+</div>
 </body>
 
 </html>

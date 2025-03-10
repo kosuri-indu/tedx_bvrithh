@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>TEDxBvrithyderabad::Bvrit Hyderabad College of Engineering for women</title>
-    <!--<meta content="width=device-width, initial-scale=1" name="viewport">-->
-    <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="tedxbvrith, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
     <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere"
         name="description">
     <link
@@ -21,7 +21,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        }
+    </script>
     <link href="css/style.css" rel="stylesheet">
 
     <style>
@@ -42,10 +65,109 @@
             text-align: left;
             padding: 8px;
             color: white;
+        }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px;
+        }
 
+        .navbar #logo img {
+            height: 50px;
+            width: 300px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a,
+        .navbar ul li form input[type="submit"] {
+            color: white;
+            text-decoration: none;
+            background-color: #E62B1E;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .navbar ul li form input[type="submit"] {
+            cursor: pointer;
+        }
+
+        .navbar ul li.social-links a {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .navbar ul li.social-links a i {
+            font-size: 24px;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar #logo img {
+                height: 40px;
+                width: 240px;
+            }
+
+            .navbar ul li a,
+            .navbar ul li form input[type="submit"] {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .navbar ul li.social-links a i {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar #logo img {
+                height: 35px;
+                width: 210px;
+            }
+
+            .navbar ul li a,
+            .navbar ul li form input[type="submit"] {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .navbar ul li.social-links a i {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar #logo img {
+                height: 30px;
+                width: 180px;
+            }
+
+            .navbar ul li a,
+            .navbar ul li form input[type="submit"] {
+                padding: 4px 8px;
+                font-size: 10px;
+            }
+
+            .navbar ul li.social-links a i {
+                font-size: 16px;
+            }
         }
     </style>
+
 
 </head>
 <!--==========================
@@ -55,57 +177,42 @@
 <body id="body" name="body">
     <header id="header">
         <div class="container">
-
             <div id="logo" class="pull-left">
-                <h1 style="float: left"><a href="#body"><img src="img/tedx.jpg" height="50px" width="200px"></a></h1>
+                <h1><a href="#body"><img src="img/tedx.jpg" height="50px" width="300px" class="img-fluid"></a></h1>
             </div>
-
-            <nav style="float: right;" id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="#body">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#portfolio">MEDIA</a></li>
-                    <li><a href="#clients">PARTNERS</a></li>
-
-                    <li><a href="#contact">VENUE</a></li>
-
+            <nav id="nav-menu-container" class="float-md-right">
+                <ul class="nav-menu d-flex justify-content-end align-items-center">
+                    <li class="menu-active"><a href="index.html#body">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#portfolio">MEDIA</a></li>
+                    <li><a href="index.html#clients">PARTNERS</a></li>
+                    <li><a href="index.html#contact">VENUE</a></li>
                     <li>
-                        <form action=team.html>
+                        <form action="team.html">
                             <input type="submit" value="TEAM"
-                                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px">
+                                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;border-radius: 6px;">
                         </form>
                     </li>
                     <li>
-                        <form action=speakers.html>
+                        <form action="speakers.html">
                             <input type="submit" value="SPEAKERS"
-                                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-left:12px;padding-right:12px">
+                                style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;padding-left:12px;padding-right:12px;">
                         </form>
                     </li>
                     <li>
-                        <form
-                            action="https://docs.google.com/forms/d/1x0r8qHoKBNAR-ZZk57FGWsvXq210hbM8qch7pGoARME/edit?ts=656f1f5d">
+                        <form action="regs.html">
                             <input type="submit" value="REGISTER"
                                 style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;width:100px;height:36px;padding-top:3px;padding-left:3px;padding-right:3px;border-radius: 6px;">
                         </form>
                     </li>
-                    <!--<li>
-                        <form action="#">
-                            <input type="submit" value="TICKETS" style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:36px;padding-top:3px;border-radius: 6px;"></form>
-                    </li>-->
-                    <li style="color:grey; padding-top:10px">|</li>
-                    <li class="social-links">
-
-                    </li>
-                    <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
-                            class="fa fa-instagram"></i></a></li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedln"><i
+                    <li class="social-links d-flex align-items-center">
+                        <a href="https://instagram.com/tedxbvrithyd?igshid=d2todTlnN2w3aGNn" class="instagram"><i
+                                class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tedxbvrithyderabad" class="linkedin"><i
                                 class="fa fa-linkedin"></i></a>
-                    </li>
                     </li>
                 </ul>
             </nav>
-            <!-- #nav-menu-container -->
         </div>
     </header>
     <!-- #header -->
@@ -113,17 +220,13 @@
     Intro Section
   ============================-->
 
-    <div style="padding-top:40px;
-padding-left:40px;padding-right:40px; ">
-        <img src="img/image.png" width=45% height=800px>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="img/image.png" class="img-fluid" alt="Intro Image">
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
 
     <!--
    <section id="intro">
@@ -199,14 +302,39 @@ padding-left:40px;padding-right:40px; ">
                 </marquee>
                 <br>
                 <a href="#">
-                    <button
-                        style="background-color:#E62B1E;color:white;border-color:black;border-width:3.5px;font-size:35px;font-weight:bold;height:100px;width:600px;padding-top:3px;border-radius: 11px;cursor: pointer;box-shadow: none;">REGISTRATIONS
-                        OPEN SOON</button>
-                </a><br><br>
+                    <button class="btn btn-danger btn-lg w-100"
+                        style="background-color:#E62B1E;color:white;border-color:black;border-width:3.5px; max-width: 600px; font-weight: bold; height: 100px; padding-top: 3px; border-radius: 11px; box-shadow: none;">
+                        REGISTRATIONS OPEN SOON
+                    </button>
+                </a>
+                <br><br>
+
+                <style>
+                    @media (max-width: 2000px) {
+                        button.btn {
+                            font-size: 35px;
+                            height: 80px;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        button.btn {
+                            font-size: 25px;
+                            height: 80px;
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        button.btn {
+                            font-size: 20px;
+                            height: 60px;
+                        }
+                    }
+                </style>
                 <!--<p>All the Bvrith students are requested to register online </p><br>-->
 
             </div>
-        </div><br><br><br><br>
+        </div><br><br>
 
 
 
@@ -607,14 +735,21 @@ Co-Organizer
                 </div>
             </div>
             <div>
-                <a href="team.html">
-                    <p style="color:white;"><b>
-                            We are a synergy of collaboration. We share and interpret ideas. Each of us brings unique
-                            skills to the table. <br>
-                            Together, we strive to unleash the potential of Technology, Entertainment, and Design. We
-                            are a TEAM.
-                        </b></p>
-                </a>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <a href="team.html">
+                                <p style="color:white; text-align: center;"><b>
+                                        We are a synergy of collaboration. We share and interpret ideas. Each of us
+                                        brings unique
+                                        skills to the table. Together, we strive to unleash the potential of Technology,
+                                        Entertainment, and Design. We
+                                        are a TEAM.
+                                    </b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="team.html">
                     <button
                         style="background-color:#E62B1E;color:white;border-color:#E62B1E;font-weight:bold;height:46px;padding-top:3px;border-radius: 6px;cursor: pointer;">OUR
@@ -636,7 +771,9 @@ Co-Organizer
         <br>
         <br>
         <br>
-        <section id="portfolio" name="portfolio" class="wow fadeInUp">
+
+        <section id="portfolio" class="wow fadeInUp">
+            <!-- name="portfolio" -->
             <div class="container">
                 <div class="section-header">
                     <h2 style="color: #e62b1e">MEDIA</h2>
@@ -649,7 +786,7 @@ Co-Organizer
                     <div class="col-lg-3 col-md-6">
                         <div class="portfolio-item wow fadeInUp">
                             <a href="img/BVRITH CLG pic 1" class="portfolio-popup">
-                                <img src="img/BVRITH CLG pic 1" alt="">
+                                <img src="img/BVRITH CLG pic 1" class="img-fluid" alt="">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-info">
                                         <h2 class="wow fadeInUp"></h2>
@@ -661,7 +798,7 @@ Co-Organizer
                     <div class="col-lg-3 col-md-6">
                         <div class="portfolio-item wow fadeInUp">
                             <a href="img/seminar hall.jpg" class="portfolio-popup">
-                                <img src="img/seminar hall.jpg" alt="">
+                                <img src="img/seminar hall.jpg" class="img-fluid" alt="">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-info">
                                         <h2 class="wow fadeInUp"></h2>
@@ -675,7 +812,7 @@ Co-Organizer
                     <div class="col-lg-3 col-md-6">
                         <div class="portfolio-item wow fadeInUp">
                             <a href="img/seminar hall2.jpg" class="portfolio-popup">
-                                <img src="img/seminar hall2.jpg" alt="">
+                                <img src="img/seminar hall2.jpg" class="img-fluid" alt="">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-info">
                                         <h2 class="wow fadeInUp"></h2>
@@ -687,7 +824,7 @@ Co-Organizer
                     <div class="col-lg-3 col-md-6">
                         <div class="portfolio-item wow fadeInUp">
                             <a href="img/bvrith img.jpeg" class="portfolio-popup">
-                                <img src="img/bvrith img.jpeg" alt="">
+                                <img src="img/bvrith img.jpeg" class="img-fluid" alt="">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-info">
                                         <h2 class="wow fadeInUp"></h2>
@@ -702,7 +839,7 @@ Co-Organizer
                     <div class="col-lg-3 col-md-6">
                         <div class="portfolio-item wow fadeInUp">
                             <a href="img/BVRITH CLG pic 1" class="portfolio-popup">
-                                <img src="#" alt="">
+                                <img src="#" class="img-fluid" alt="">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-info">
                                         <h2 class="wow fadeInUp"></h2>
@@ -816,58 +953,42 @@ Co-Organizer
         <br>
         <br>
         <br>
-        <section id="contact" name="contact" class="wow fadeInUp">
+        <section id="contact" class="wow fadeInUp">
             <div class="container">
                 <div class="section-header">
                     <h2 style="color: #e62b1e">Reach To Us</h2>
-
                 </div>
-
                 <div class="row contact-info">
-
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="contact-address">
                             <i class="ion-ios-location-outline"></i>
                             <h3>Address</h3>
-                            <address style=color:white;><b>Bvrit Hyderabad College of Engineering for Women,<br>Nizampet</b></address>
+                            <address style="color:white;"><b>Bvrit Hyderabad College of Engineering for
+                                    Women,<br>Nizampet</b></address>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="contact-phone">
                             <i class="ion-ios-telephone-outline"></i>
                             <h3>Phone Number</h3>
-                            <p style=color:white;><b>+91 7989763304</b></p>
+                            <p style="color:white;"><b>+91 7989763304</b></p>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="contact-email">
                             <i class="ion-ios-email-outline"></i>
                             <h3>Email</h3>
-                            <p style=color:white;><b>tedxbvrith@bvrithyderabad.edu.in</b></p>
+                            <p style="color:white;"><b>tedxbvrith@bvrithyderabad.edu.in</b></p>
                         </div>
                     </div>
-
+                </div>
+                <div class="container mb-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5915280267627!2d78.36879737492228!3d17.52700179876859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8defd4fe2b81%3A0x64cfbb18950c8603!2sBVRIT%20Hyderabad%20College%20of%20Engineering%20for%20Women!5e0!3m2!1sen!2sin!4v1698465255555!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
-            <div class="container mb-4">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5915280267627!2d78.36879737492228!3d17.52700179876859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8defd4fe2b81%3A0x64cfbb18950c8603!2sBVRIT%20Hyderabad%20College%20of%20Engineering%20for%20Women!5e0!3m2!1sen!2sin!4v1698465255555!5m2!1sen!2sin"
-                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            width="80%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-            <br>
-            <br>
-            <!--<div class="container mb-4">
-		Copyright © 2022 - TEDxBVRITH. All Rights Reserved
-	    </div>-->
-
-
-
         </section>
         <!-- #contact -->
 
