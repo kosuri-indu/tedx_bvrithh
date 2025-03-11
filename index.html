@@ -166,8 +166,81 @@
                 font-size: 16px;
             }
         }
-    </style>
 
+        * Existing styles */ #clockdiv {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        /* Existing styles */
+        #clockdiv {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv div {
+            padding: 10px;
+            border-radius: 3px;
+            background: #333;
+            /* Dark grey background */
+            color: white;
+            width: 100px;
+            /* Ensure all boxes are the same size */
+            height: 100px;
+            /* Ensure all boxes are the same size */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clockdiv .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            #clockdiv {
+                font-size: 20px;
+            }
+
+            #clockdiv div {
+                width: 80px;
+                /* Adjust size for smaller screens */
+                height: 80px;
+                /* Adjust size for smaller screens */
+            }
+
+            #clockdiv .smalltext {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #clockdiv {
+                font-size: 16px;
+            }
+
+            #clockdiv div {
+                width: 60px;
+                /* Adjust size for smaller screens */
+                height: 60px;
+                /* Adjust size for smaller screens */
+            }
+
+            #clockdiv .smalltext {
+                font-size: 12px;
+            }
+        }
+    </style>
 
 </head>
 <!--==========================
@@ -355,6 +428,7 @@
                     <div> <br>
                         <h1 style="color:white;font;font-weight:bold;">COUNTDOWN</h1>
                         <hr width="50%" align="center" color="white">
+                        <br>
 
                         <div id="clockdiv" style=color:white;>
                             <div>
@@ -383,10 +457,11 @@
                 <div class="col-lg-6 content">
 
                     <br>
-                    <h2 style="color:white;font-size=34px;">DATE</h2>
+                    <h1 style="color:white;font-weight: bold;">DATE</h1>
                     <center>
                         <hr width="50%" align="center" color="white">
                     </center>
+                    <br>
                     <h2 style="color: white; font-size=34px;"> 11th April 2025 </h2>
                     <h2 style="color:white;"><b> starts at 10:00 AM</b> </h2><br>
                 </div>
